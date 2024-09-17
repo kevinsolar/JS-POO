@@ -1,6 +1,15 @@
+import { Cliente } from "./Cliente";
+
 export class ContaCorrente {
 	agencia;
-   cliente;
+   _cliente;
+
+   // com isso obrigamos a atribuição de um cliente, seja atráves do molde Cliente, e caso tentem fazer de um valor aleatório, como um numero 0, ela ficará undefined
+   set cliente(novoValor) {
+      if (novoValor instanceof Cliente) {
+         this._cliente = novoValor;
+      }
+   }
 
 	// #saldo = 0; é bom, mas ainda não deve ser usado pois não foi implementado oficialmente.
 	//Então usaremos o underline _ na frente da nossa variavel, que vai ser entendida pela comunidade como um campo privado.
