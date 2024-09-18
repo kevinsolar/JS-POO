@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente";
+import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
 	agencia;
@@ -11,9 +11,17 @@ export class ContaCorrente {
       }
    }
 
+   get cliente() {
+      return this._cliente;
+   }
+
 	// #saldo = 0; é bom, mas ainda não deve ser usado pois não foi implementado oficialmente.
 	//Então usaremos o underline _ na frente da nossa variavel, que vai ser entendida pela comunidade como um campo privado.
 	_saldo = 0;
+
+   get saldo() {
+      return this._saldo;
+   }
 
 	sacar(valor) {
 		if (this._saldo >= valor) {
