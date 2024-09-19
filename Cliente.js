@@ -11,6 +11,4 @@ export class Cliente {
       this._cpf = cpf;
    }
 
-   //
-
 }
