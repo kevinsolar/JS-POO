@@ -1,6 +1,7 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
+   static numeroDeContas = 0;//como esse é um vlaor que vai ser idependente, vai ser adicionado toda vez que vou criar uma "Conta", então preciso declarar de uma forma especial, com static.
 	agencia;
    _cliente;
 
@@ -26,6 +27,7 @@ export class ContaCorrente {
    constructor(agencia, cliente) {
       this.agencia = agencia;
       this.cliente = cliente;
+      ContaCorrente.numeroDeContas += 1;
    }
 
 	sacar(valor) {

@@ -1,9 +1,10 @@
 import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
-const cliente1 = new Cliente("Ricardo", 8889995520);
-
+const cliente1 = new Cliente("Ricardo", 8889995520);//toda vez que tem um parenteses ele tem a chamada de uma função, e caso tenha um construtor na minha classe, ele automaticamente chama o meu construtor.
 const cliente2 = new Cliente("Alice", 88899955521);
+
+
 
 const contaCorrentRicardo = new ContaCorrente(1001, cliente1);
 contaCorrentRicardo.depositar(500);
@@ -18,4 +19,4 @@ conta2.agencia = 102;
 contaCorrentRicardo.transferir(200, conta2)
 
 
-console.log(cliente2)
+console.log(ContaCorrente.numeroDeContas);
